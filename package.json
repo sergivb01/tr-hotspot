@@ -1,7 +1,7 @@
 {
-  "name": "api-example",
+  "name": "tr-hotspot",
   "version": "1.0.0",
-  "description": "A brief description of this API",
+  "description": "A hotspot system for my High School. Handles both hotspot website and block website for the DNS filter server blockpage.",
   "keywords": [],
   "homepage": "https://github.com/sergivb01/api-sample/#readme",
   "author": "Sergi Vos Bosch <me@sergivb01.me> (https://sergivb01.me)",
@@ -25,10 +25,12 @@
     "dev": "nodemon src/index.js"
   },
   "dependencies": {
-    "dotenv": "^6.0.0",
-    "express": "^4.16.3",
-    "helmet": "^3.13.0",
-    "morgan": "^1.9.0"
+    "axios": "^0.18.0",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "helmet": "^3.15.0",
+    "morgan": "^1.9.1",
+    "xml2js-es6-promise": "^1.1.1"
   },
   "devDependencies": {
     "eslint": "^5.2.0",

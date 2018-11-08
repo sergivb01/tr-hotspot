@@ -2,7 +2,7 @@
   "name": "api-sample",
   "type": "npm",
   "alias": [
-    "api-sample.now.sergivb01.me"
+    "tr-hotspot.now.sergivb01.me"
   ],
   "env": {
     "NODE_ENV": "development"

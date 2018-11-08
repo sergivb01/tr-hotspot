@@ -1,7 +1,7 @@
 FROM node:8
 
 LABEL maintainer "Sergi Vos Bosch <me@sergivb01.me>"
-LABEL description "A brief description of this API."
+LABEL description "A hotspot system for my High School. Handles both hotspot website and block website for the DNS filter server blockpage.."
 
 # defaults to production, compose overrides this to development on build and run
 ARG NODE_ENV=production

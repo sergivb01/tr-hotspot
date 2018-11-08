@@ -5,7 +5,7 @@ version: '3.1'
 services:
   node:
     # reminder, don't use latest tag in production, use versions created by CI/CD
-    image: sergivb01/api-sample:latest
+    image: sergivb01/tr-hotspot:latest
     ports:
       - "80:80"
     environment:

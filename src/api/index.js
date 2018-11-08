@@ -8,6 +8,7 @@ router.get('/', (req, res) => {
   })
 })
 
-router.use('/emojis', require('./emojis'))
+router.use('/wp', require('./wordpress'))
+router.use('/pihole', require('./pihole'))
 
 module.exports = router

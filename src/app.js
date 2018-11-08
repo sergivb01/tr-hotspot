@@ -12,6 +12,8 @@ const app = express()
 app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'))
 app.use(helmet())
 
+app.use(middlewares.blockPageHandler)
+
 app.get('/', (req, res) => {
   res.json({
     message: '🦄🌈✨👋🌎🌍🌏✨🌈🦄'

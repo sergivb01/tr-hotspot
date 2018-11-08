@@ -15,7 +15,7 @@ A brief description of the methods or ways this can be installed in a developmen
 * And some
 
 ```bash
-docker run sergivb01/api-sample
+docker run sergivb01/tr-hotspot
 ```
 
 ### Production
@@ -42,21 +42,21 @@ A link to the documentation or the documentation itself (if short)
 APi Sample is licensed under the [MIT License](LICENSE).
 
 <!-- Travis-ci.com -->
-[travis]: https://img.shields.io/travis/com/sergivb01/api-sample.svg
-[travis-url]: https://travis-ci.com/sergivb01/api-sample
+[travis]: https://img.shields.io/travis/com/sergivb01/tr-hotspot.svg
+[travis-url]: https://travis-ci.com/sergivb01/tr-hotspot
 
 <!-- Circleci.com -->
-[circle]: https://circleci.com/gh/sergivb01/api-sample.svg?style=svg
-[circle-url]: https://circleci.com/gh/sergivb01/api-sample
+[circle]: https://circleci.com/gh/sergivb01/tr-hotspot.svg?style=svg
+[circle-url]: https://circleci.com/gh/sergivb01/tr-hotspot
 
 <!-- Snyk -->
-[snyk]: https://snyk.io/test/github/sergivb01/api-sample/badge.svg?targetFile=package.json
-[snyk-url]: https://snyk.io/test/github/sergivb01/api-sample?targetFile=package.json
+[snyk]: https://snyk.io/test/github/sergivb01/tr-hotspot/badge.svg?targetFile=package.json
+[snyk-url]: https://snyk.io/test/github/sergivb01/tr-hotspot?targetFile=package.json
 
 <!-- Dependencies -->
-[deps]: https://david-dm.org/sergivb01/api-sample/dev-status.svg
-[deps-url]: https://david-dm.org/sergivb01/api-sample
+[deps]: https://david-dm.org/sergivb01/tr-hotspot/dev-status.svg
+[deps-url]: https://david-dm.org/sergivb01/tr-hotspot
 
 <!-- PR Welcome -->
 [pr_welcome]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
-[pr_welcome-url]: https://github.com/sergivb01/api-sample/pulls
+[pr_welcome-url]: https://github.com/sergivb01/tr-hotspot/pulls

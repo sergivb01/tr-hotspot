@@ -1,3 +1,5 @@
+const HOSTNAMES = process.env.HOSTNAMES.split(',') || ['localhost']
+
 function notFound(req, res, next) {
   res.status(404)
   const error = new Error('🔍 - Not Found - ' + req.originalUrl)
@@ -13,7 +15,20 @@ function errorHandler(err, req, res, next) {
   })
 }
 
+function isValidHostname(hostname) {
+  return HOSTNAMES.indexOf(hostname) !== -1
+}
+
+function blockPageHandler(req, res, next) {
+  if (!isValidHostname(req.hostname)) {
+    //TODO: Send to blockpage
+    res.send('invalid hostname')
+  }
+  next()
+}
+
 module.exports = {
   notFound,
-  errorHandler
+  errorHandler,
+  blockPageHandler
 }
