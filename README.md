@@ -34,11 +34,11 @@ A link to the documentation or the documentation itself (if short)
 TR-Hotspot licensed under the [LICENSE](LICENSE).
 
 <!-- Travis-ci.com -->
-[travis]: https://img.shields.io/travis/com/sergivb01/tr-hotspot.svg
+[travis]: https://travis-ci.com/sergivb01/tr-hotspot.svg?token=GjsMB12Wk5CRg9xxFE1T&branch=master
 [travis-url]: https://travis-ci.com/sergivb01/tr-hotspot
 
 <!-- Circleci.com -->
-[circle]: https://circleci.com/gh/sergivb01/tr-hotspot.svg?style=svg
+[circle]: https://circleci.com/gh/sergivb01/tr-hotspot.svg?style=svg&circle-token=27fc9c6cd8badfcb006bbd646b530c0f9e148a78
 [circle-url]: https://circleci.com/gh/sergivb01/tr-hotspot
 
 <!-- Snyk -->
