@@ -1,0 +1,16 @@
+{
+  "name": "api-sample",
+  "type": "npm",
+  "alias": [
+    "api-sample.now.sergivb01.me"
+  ],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "scale": {
+    "bru1": {
+      "min": 1,
+      "max": 1
+    }
+  }
+}

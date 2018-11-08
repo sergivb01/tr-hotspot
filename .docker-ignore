@@ -1,0 +1,6 @@
+node_modules
+.github
+.circleci
+.git
+package-lock.json
+.env

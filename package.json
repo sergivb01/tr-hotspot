@@ -1,0 +1,41 @@
+{
+  "name": "api-example",
+  "version": "1.0.0",
+  "description": "A brief description of this API",
+  "keywords": [],
+  "homepage": "https://github.com/sergivb01/api-sample/#readme",
+  "author": "Sergi Vos Bosch <me@sergivb01.me> (https://sergivb01.me)",
+  "bugs": {
+    "url": "https://github.com/sergivb01/api-sample/issues",
+    "email": "hi@sergivb01.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sergivb01/api-sample"
+  },
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "lint": "eslint --fix src",
+    "audit": "snyk test",
+    "deploy": "now rm api-sample --yes && now && now alias",
+    "test": "mocha",
+    "test:watch": "mocha -w",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "helmet": "^3.13.0",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.2.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.3",
+    "snyk": "^1.89.0",
+    "supertest": "^3.1.0"
+  },
+  "license": "MIT"
+}
