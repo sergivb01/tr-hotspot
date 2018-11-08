@@ -23,12 +23,12 @@ If applicable, a table or images with benchmarks (include tools used to perform 
 A link to the documentation or the documentation itself (if short)
 
 ## 📃 TODOs
-[ ] Start scratch frontend.
-[ ] Implement unifi API.
-[ ] Implement Google OAuth 2.0 login system.
-[ ] Implement Admin panel.
-[ ] Implement logging.
-[ ] Add graphs.
+* [ ] Start scratch frontend.
+* [ ] Implement unifi API.
+* [ ] Implement Google OAuth 2.0 login system.
+* [ ] Implement Admin panel.
+* [ ] Implement logging.
+* [ ] Add graphs.
 
 ## 📖 License
 TR-Hotspot licensed under the [LICENSE](LICENSE).
