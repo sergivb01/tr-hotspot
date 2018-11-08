@@ -26,6 +26,9 @@ app.use('/api/v1', api)
 app.use(middlewares.notFound)
 app.use(middlewares.errorHandler)
 
-feedFetcher.readRSS()
+const scheduler = setInterval(() => {
+  feedFetcher.readRSS()
+}, 60 * 60 * 1000)
+scheduler.unref()
 
 module.exports = app
