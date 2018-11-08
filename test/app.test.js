@@ -1,8 +1,9 @@
+/* global describe it */
 const request = require('supertest')
 
 const app = require('../src/app')
 
-describe('app', () => {
+describe('Check basic app usage', () => {
   it('responds with a not found message', function (done) {
     request(app)
       .get('/what-is-this-even')
@@ -10,9 +11,7 @@ describe('app', () => {
       .expect('Content-Type', /json/)
       .expect(404, done)
   })
-})
 
-describe('GET /', () => {
   it('responds with a json message', function (done) {
     request(app)
       .get('/')

@@ -20,6 +20,9 @@ module.exports = {
       "error",
       2
     ],
+    "mocha/no-exclusive-tests": "error",
+    "mocha/no-identical-title": "error",
+    "prefer-arrow-callback": "error",
     "no-unused-vars": [
       1,
       {
@@ -40,6 +43,7 @@ module.exports = {
     ]
   },
   "plugins": [
-    "prettier"
+    "prettier",
+    "mocha"
   ]
 }

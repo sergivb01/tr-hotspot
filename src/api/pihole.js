@@ -4,6 +4,11 @@ const axios = require('axios')
 const router = express.Router()
 const BASE_URL = 'http://' + (process.env.PIHOLE_DOMAIN || 'localhost') + '/admin/api.php?auth=' + process.env.PIHOLE_TOKEN
 
+/**
+ * TODO:
+ * Add error handling for axios
+ */
+
 router.get('/', async (req, res) => {
   const response = await axios.get(`${BASE_URL}&summaryRaw`)
 

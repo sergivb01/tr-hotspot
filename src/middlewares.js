@@ -1,4 +1,4 @@
-const HOSTNAMES = process.env.HOSTNAMES.split(',') || ['localhost']
+const HOSTNAMES = process.env.HOSTNAMES ? process.env.HOSTNAMES.split(',') : ['localhost', '127.0.0.1']
 
 function notFound(req, res, next) {
   res.status(404)
@@ -22,7 +22,11 @@ function isValidHostname(hostname) {
 function blockPageHandler(req, res, next) {
   if (!isValidHostname(req.hostname)) {
     //TODO: Send to blockpage
-    res.send('invalid hostname')
+    return res.send({
+      error: true,
+      message: 'Should print blockpage',
+      hostname: req.hostname
+    })
   }
   next()
 }

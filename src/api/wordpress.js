@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
   const formattedFeed = await formatFeed.formatFeed(response.data)
 
   res.send({
-    error: false,
+    error: true,
     message: 'Successfuly fetched latest post from Wordpress Blog',
     data: formattedFeed
   })
