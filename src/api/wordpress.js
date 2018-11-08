@@ -1,18 +1,13 @@
 const express = require('express')
-const axios = require('axios')
+let feedFetcher = require('../utils/feedFetcher')
 
 const router = express.Router()
-const formatFeed = require('../utils/wordpressFormatter')
-const URL = 'http://' + (process.env.WP_URL || 'localhost')
 
 router.get('/', async (req, res) => {
-  const response = await axios.get(`${URL}/feed/`)
-  const formattedFeed = await formatFeed.formatFeed(response.data)
-
   res.send({
-    error: true,
+    error: false,
     message: 'Successfuly fetched latest post from Wordpress Blog',
-    data: formattedFeed
+    data: feedFetcher.getFeed()
   })
 })
 
