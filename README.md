@@ -10,36 +10,28 @@ A hotspot system for my High School. Handles both hotspot website and block webs
 ## 📦 Installation
 A brief description of the methods or ways this can be installed in a development or production enviroment.
 
-### Development
-* List of steps
-* And some
-
-```bash
-docker run sergivb01/tr-hotspot
-```
-
 ### Production
-* List of steps
-* And some
-
-```bash
-curl -qs https://raw.githubusercontent.com/sergivb01/TreballRecerca/master/scripts/install.sh | sh -
-```
+* Install all the dependencies by running `npm install`.
+* Rename `.env.sample` to `.env`.
+* Edit `.env` configuration.
+* Start the web server by running `npm start`.
 
 ## 📈 Benchmarks
 If applicable, a table or images with benchmarks (include tools used to perform them and the arguments/values).
-
 
 ## 📁 Documentation
 A link to the documentation or the documentation itself (if short)
 
 ## 📃 TODOs
-* A TODO
-* List for tasks
-* That must be done 🌮
+[ ] Start scratch frontend.
+[ ] Implement unifi API.
+[ ] Implement Google OAuth 2.0 login system.
+[ ] Implement Admin panel.
+[ ] Implement logging.
+[ ] Add graphs.
 
 ## 📖 License
-APi Sample is licensed under the [MIT License](LICENSE).
+TR-Hotspot licensed under the [LICENSE](LICENSE).
 
 <!-- Travis-ci.com -->
 [travis]: https://img.shields.io/travis/com/sergivb01/tr-hotspot.svg
