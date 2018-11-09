@@ -23,6 +23,7 @@ If applicable, a table or images with benchmarks (include tools used to perform 
 A link to the documentation or the documentation itself (if short)
 
 ## 📃 TODOs
+* [ ] Add error handling for axios requests.
 * [ ] Start scratch frontend.
 * [ ] Implement unifi API.
 * [ ] Implement Google OAuth 2.0 login system.

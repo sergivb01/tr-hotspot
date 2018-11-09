@@ -19,6 +19,16 @@ router.get('/', async (req, res) => {
   })
 })
 
+router.get('/history', async (req, res) => {
+  const response = await axios.get(`${BASE_URL}&overTimeData10mins`)
+
+  res.send({
+    error: false,
+    message: 'Successfuly fetched DNS queries over 10 minutes.',
+    data: response.data
+  })
+})
+
 router.get('/querytypes', async (req, res) => {
   const response = await axios.get(`${BASE_URL}&getQueryTypes`)
 
@@ -30,7 +40,7 @@ router.get('/querytypes', async (req, res) => {
 })
 
 router.get('/topitems', async (req, res) => {
-  const response = await axios.get(`${BASE_URL}&topItems=25`)
+  const response = await axios.get(`${BASE_URL}&topItems=10`)
 
   res.send({
     error: false,

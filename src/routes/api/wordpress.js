@@ -1,5 +1,5 @@
 const express = require('express')
-let feedFetcher = require('../utils/feedFetcher')
+let feedFetcher = require('../../utils/feedFetcher')
 
 const router = express.Router()
 
