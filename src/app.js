@@ -4,9 +4,13 @@ const express = require('express')
 const morgan = require('morgan')
 const helmet = require('helmet')
 const path = require('path')
+const bodyParser = require('body-parser')
+const passport = require('passport')
+const mongoose = require('mongoose')
 
 const middlewares = require('./middlewares')
 const feedFetcher = require('./utils/feedFetcher')
+require('./utils/passport')
 
 const app = express()
 
@@ -28,6 +32,18 @@ app.use(require('express-session')({
   saveUninitialized: true,
   secret: process.env.SECRET
 }))
+app.use(
+  bodyParser.json(),
+  bodyParser.urlencoded({
+    extended: true
+  }),
+  passport.initialize(),
+  passport.session()
+)
+
+mongoose.connect(process.env.MONGO_DB, () =>
+  console.log('Connected to MongoDB successfuly!')
+)
 
 app.use(middlewares.blockPageHandler)
 

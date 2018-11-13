@@ -23,10 +23,9 @@ const isValidHostname = (hostname) => {
 const blockPageHandler = (req, res, next) => {
   if (!isValidHostname(req.hostname)) {
     // TODO: Send to blockpage
-    return res.send({
-      error: true,
-      message: 'Should print blockpage',
-      hostname: req.hostname
+    return res.render('error', {
+      'title': '🚫 Page Blocked 🙅‍',
+      'description': `${req.hostname} és una pàgina bloquejada!`
     })
   }
   next()

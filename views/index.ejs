@@ -2,9 +2,17 @@
 layout('layouts/default')
 
 block('title', 'INS La Bisbal - Hotspot')
+block('script', 'about')
 block('hero_size', 'fullheight')
 block('hero_title', loggedIn ? 'Logged in' : 'Hotspot Log in')
-block('hero_content', loggedIn ? 'You are currently connected' : `
+block('hero_content', loggedIn ?
+`
+<a class="button" href="/auth/logout">
+	<span class="icon is-small"><i class="fas fa-home"></i></span>
+	<span>Logout</span>
+	</a>
+` :
+`
 <a class="button" href="/auth/google">
 	<span class="icon is-small"><i class="fab fa-google"></i></span>
 	<span>Connect</span>
@@ -14,6 +22,6 @@ block('hero_content', loggedIn ? 'You are currently connected' : `
 <% include layouts/hero  %>
 <% include includes/notification %>
 <div class="container">
-	<% include includes/currently_authed %>
-	<% include includes/about %>
+  <% include includes/currently_authed %>
+  <% include includes/about %>
 </div>

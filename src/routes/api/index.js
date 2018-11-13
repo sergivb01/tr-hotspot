@@ -7,8 +7,8 @@ router.get('/', (req, res) => {
     message: 'API - 👋🌎🌍🌏'
   })
 })
-
-router.use('/wp', require('./wordpress'))
 router.use('/pihole', require('./pihole'))
+router.use('/unifi', require('./unifi'))
+router.use('/wp', require('./wordpress'))
 
 module.exports = router

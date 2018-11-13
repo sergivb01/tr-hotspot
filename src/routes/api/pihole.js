@@ -24,7 +24,7 @@ router.get('/history', async (req, res) => {
 
   res.send({
     error: false,
-    message: 'Successfuly fetched DNS queries over 10 minutes.',
+    message: 'Successfuly fetched total of query types',
     data: response.data
   })
 })
