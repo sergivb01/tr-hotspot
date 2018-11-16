@@ -233,9 +233,9 @@ const drawHeatmap = (json) => {
   }
 
   var chart = new ApexCharts(
-    document.querySelector("#graph-unifi-heatmap"),
+    document.querySelector('#graph-unifi-heatmap'),
     options
-  );
+  )
 
-  chart.render();
+  chart.render()
 }
