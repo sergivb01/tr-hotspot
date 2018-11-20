@@ -3,6 +3,9 @@ const express = require('express')
 const router = express.Router()
 
 router.get('/s/default', (req, res) => {
+  if (req.user) {
+    req.logout()
+  }
   req.session.details = {
     mac: req.query.id,
     ap: req.query.ap,

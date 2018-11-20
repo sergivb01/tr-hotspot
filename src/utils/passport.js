@@ -19,7 +19,6 @@ passport.use(
     callbackURL: process.env.GOOGLE_CALLBACK
   }, (accessToken, refreshToken, profile, done) => {
     let isEmailValid = profile.emails[0].value.endsWith(`@${process.env.EMAIL}`)
-    console.log('abcde4')
     if (!isEmailValid) done(new Error('Wrong domain!', 'The used email is not valid'))
 
     User.findOne({
@@ -27,10 +26,8 @@ passport.use(
     }).then((currentUser) => {
       if (currentUser) { // User already exists in the database
         if (process.env.NODE_ENV !== 'production') console.info(`An already registered user has just logged in! ${currentUser}`)
-        console.log('abcde3')
         done(null, currentUser)
       } else { // User is new, create profile
-        console.log('abcde2')
         new User({
           googleId: profile.id,
           username: profile.displayName,
@@ -39,7 +36,6 @@ passport.use(
         }).save().then((newUser) => {
           if (process.env.NODE_ENV !== 'production') console.info(`A new user has been registered and logged in! ${newUser}`)
 
-          console.log('abcde1')
           done(null, newUser)
         })
       }

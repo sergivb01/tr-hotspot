@@ -4,5 +4,5 @@ const port = process.env.PORT || 80
 
 app.listen(port, () => {
   /* eslint-disable-next-line no-console */
-  console.log(`Listening: http://localhost:${port}`)
+  console.info(`Listening: http://localhost:${port}`)
 })

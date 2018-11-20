@@ -42,7 +42,7 @@ app.use(
 )
 
 mongoose.connect(process.env.MONGO_DB, () =>
-  console.log('Connected to MongoDB successfuly!')
+  console.info('Connected to MongoDB successfuly!')
 )
 
 app.use(middlewares.blockPageHandler)

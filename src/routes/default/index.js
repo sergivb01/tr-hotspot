@@ -9,12 +9,8 @@ router.get('/', (req, res) => {
     mac: req.session.details ? req.session.details.mac : 'none'
   })
 })
-console.log(ADMIN_EMAILS)
 
 router.get('/statistics', (req, res) => {
-  let user = req.user
-  console.log(user)
-
   if (req.user ? (ADMIN_EMAILS.indexOf(req.user.email) === -1) : true) {
     return res.send('unauthorized')
   }
