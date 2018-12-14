@@ -20,8 +20,6 @@
     "lint": "eslint --fix src",
     "audit": "snyk test",
     "deploy": "now rm api-sample --yes && now && now alias",
-    "test": "mocha",
-    "test:watch": "mocha -w",
     "dev": "nodemon src/index.js"
   },
   "dependencies": {
@@ -45,10 +43,8 @@
   "devDependencies": {
     "eslint": "^5.2.0",
     "eslint-plugin-mocha": "^5.2.0",
-    "mocha": "^5.2.0",
     "nodemon": "^1.18.3",
-    "snyk": "^1.89.0",
-    "supertest": "^3.1.0"
+    "snyk": "^1.89.0"
   },
   "license": "MIT"
 }

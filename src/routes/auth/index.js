@@ -34,7 +34,6 @@ router.get('/google/redirect', passport.authenticate('google', {
 
   req.session.authed = (details != null)
   req.session.save()
-  console.log('redirectt')
 
   return res.redirect('/statistics')
 })

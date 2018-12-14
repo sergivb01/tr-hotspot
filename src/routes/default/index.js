@@ -1,6 +1,7 @@
 const express = require('express')
-const ADMIN_EMAILS = process.env.ADMIN_EMAILS ? process.env.ADMIN_EMAILS.split(',') : ['sergi.vos16@ieslabisbal.cat']
 const router = express.Router()
+
+const adminUser = require('../../utils/adminUser')
 
 router.get('/', (req, res) => {
   res.render('index', {
@@ -11,8 +12,8 @@ router.get('/', (req, res) => {
 })
 
 router.get('/statistics', (req, res) => {
-  if (req.user ? (ADMIN_EMAILS.indexOf(req.user.email) === -1) : true) {
-    return res.send('unauthorized')
+  if (!adminUser.isAdmin(req.user)) {
+    return res.redirect('/')
   }
 
   res.render('statistics', {
