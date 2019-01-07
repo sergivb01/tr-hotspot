@@ -13,13 +13,19 @@ router.get('/logout', (req, res) => {
 router.get('/google', passport.authenticate('google', {
   hd: process.env.EMAIL,
   prompt: 'select_account',
-  scope: ['email profile']
+  scope: [
+    'email',
+    'profile'
+  ]
 }))
 
 router.get('/google/redirect', passport.authenticate('google', {
   hd: process.env.EMAIL,
   prompt: 'select_account',
-  scope: ['email', 'profile']
+  scope: [
+    'email',
+    'profile'
+  ]
 }), (req, res) => {
   let details = req.session.details
 

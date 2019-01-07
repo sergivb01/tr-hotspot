@@ -18,12 +18,12 @@ const errorHandler = (err, req, res, next) => {
   })
 }
 
-const isValidHostname = hostname => {
-  return HOSTNAMES.indexOf(hostname) !== -1
-}
-
 const isAccessingByDomain = hostname => {
   return hostname === process.env.REDIRECT_HOSTNAME || 'hs.vostele.com'
+}
+
+const isValidHostname = hostname => {
+  return HOSTNAMES.indexOf(hostname) !== -1
 }
 
 const blockPageHandler = (req, res, next) => {
@@ -34,6 +34,7 @@ const blockPageHandler = (req, res, next) => {
       description: `${req.hostname} és una pàgina bloquejada!`
     })
   }
+
   if (!isAccessingByDomain(req.hostname) && (process.env.BLOCK_IP || false)) {
     return res.redirect(`http://${process.env.REDIRECT_HOSTNAME}`)
   }

@@ -6,6 +6,7 @@ const unifi = unifiClient({
   debug: false,
   debugNet: false
 })
+/* eslint-disable */
 
 const authMAC = mac => {
   return new Promise((resolve, reject) => {
