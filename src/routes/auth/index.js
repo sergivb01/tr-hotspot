@@ -15,7 +15,11 @@ router.get('/google', passport.authenticate('google', {
   prompt: 'select_account',
   scope: [
     'email',
-    'profile'
+    'profile',
+    'https://www.googleapis.com/auth/userinfo.email',
+    'https://www.googleapis.com/auth/userinfo.profile',
+    'https://www.googleapis.com/auth/plus.me',
+    'https://www.googleapis.com/auth/plus.login'
   ]
 }))
 
@@ -24,7 +28,11 @@ router.get('/google/redirect', passport.authenticate('google', {
   prompt: 'select_account',
   scope: [
     'email',
-    'profile'
+    'profile',
+    'https://www.googleapis.com/auth/userinfo.email',
+    'https://www.googleapis.com/auth/userinfo.profile',
+    'https://www.googleapis.com/auth/plus.me',
+    'https://www.googleapis.com/auth/plus.login'
   ]
 }), (req, res) => {
   let details = req.session.details
