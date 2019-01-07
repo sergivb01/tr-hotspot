@@ -17,9 +17,7 @@ router.get('/google', passport.authenticate('google', {
     'email',
     'profile',
     'https://www.googleapis.com/auth/userinfo.email',
-    'https://www.googleapis.com/auth/userinfo.profile',
-    'https://www.googleapis.com/auth/plus.me',
-    'https://www.googleapis.com/auth/plus.login'
+    'https://www.googleapis.com/auth/userinfo.profile'
   ]
 }))
 
@@ -30,9 +28,7 @@ router.get('/google/redirect', passport.authenticate('google', {
     'email',
     'profile',
     'https://www.googleapis.com/auth/userinfo.email',
-    'https://www.googleapis.com/auth/userinfo.profile',
-    'https://www.googleapis.com/auth/plus.me',
-    'https://www.googleapis.com/auth/plus.login'
+    'https://www.googleapis.com/auth/userinfo.profile'
   ]
 }), (req, res) => {
   let details = req.session.details
