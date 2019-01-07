@@ -15,9 +15,7 @@ router.get('/google', passport.authenticate('google', {
   prompt: 'select_account',
   scope: [
     'email',
-    'profile',
-    'https://www.googleapis.com/auth/userinfo.email',
-    'https://www.googleapis.com/auth/userinfo.profile'
+    'profile'
   ]
 }))
 
@@ -26,9 +24,7 @@ router.get('/google/redirect', passport.authenticate('google', {
   prompt: 'select_account',
   scope: [
     'email',
-    'profile',
-    'https://www.googleapis.com/auth/userinfo.email',
-    'https://www.googleapis.com/auth/userinfo.profile'
+    'profile'
   ]
 }), (req, res) => {
   let details = req.session.details
