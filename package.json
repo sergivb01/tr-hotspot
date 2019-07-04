@@ -20,7 +20,9 @@
     "lint": "eslint --fix src",
     "audit": "snyk test",
     "deploy": "now rm api-sample --yes && now && now alias",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -38,13 +40,14 @@
     "passport": "^0.4.0",
     "passport-google-oauth2": "^0.1.6",
     "striptags": "^3.1.1",
-    "xml2js-es6-promise": "^1.1.1"
+    "xml2js-es6-promise": "^1.1.1",
+    "snyk": "^1.190.0"
   },
   "devDependencies": {
     "eslint": "^5.2.0",
     "eslint-plugin-mocha": "^5.2.0",
-    "nodemon": "^1.18.3",
-    "snyk": "^1.89.0"
+    "nodemon": "^1.18.3"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
